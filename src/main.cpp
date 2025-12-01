@@ -21,6 +21,17 @@ int main(std::string argv[])
     {
       std::cout << command.substr(5) << std::endl;
     }
+    else if (command.substr(4) == "type")
+    {
+      if (command.substr(5) == "echo")
+        std::cout << "echo is a shell builtin" << std::endl;
+      else if (command.substr(5) == "exit")
+        std::cout << "exit is a shell builtin" << std::endl;
+      else if (command.substr(5) == "type")
+        std::cout << "type is a shell builtin" << std::endl;
+      else
+        std::cout << command.substr(5) << ": not found" << std::endl;
+    }
     else
       std::cout << command << ": command not found" << std::endl;
   }
