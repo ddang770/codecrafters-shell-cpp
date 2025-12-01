@@ -17,10 +17,11 @@ int main(std::string argv[])
     {
       return 0;
     }
-    if (command.substr(0, 4) == "echo")
+    else if (command.substr(0, 4) == "echo")
     {
       std::cout << command.substr(5) << std::endl;
     }
-    std::cout << command << ": command not found" << std::endl;
+    else
+      std::cout << command << ": command not found" << std::endl;
   }
 }
