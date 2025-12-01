@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-int main() {
+int main()
+{
   // Flush after every std::cout / std:cerr
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
@@ -10,6 +11,10 @@ int main() {
   std::cout << "$ ";
   std::string command;
   std::getline(std::cin, command);
-  std::cout << command << ": command not found"<< std::endl;
+  if (command == "exit")
+  {
+    return 0;
+  }
+  std::cout << command << ": command not found" << std::endl;
   main();
 }
