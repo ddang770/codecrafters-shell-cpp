@@ -21,7 +21,7 @@ int main(std::string argv[])
     {
       std::cout << command.substr(5) << std::endl;
     }
-    else if (command.substr(4) == "type")
+    else if (command.substr(0, 4) == "type")
     {
       if (command.substr(5) == "echo")
         std::cout << "echo is a shell builtin" << std::endl;
